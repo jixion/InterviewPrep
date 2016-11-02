@@ -5,11 +5,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src ="weatherWidget.module.js"></script>
     <script src ="weatherWidget.controller.js"></script>
+    <script src ="weatherWidget.component.js"></script>
     <title>Title</title>
 </head>
 <body ng-app="WeatherWidget" ng-strict-di>
-    <div ng-controller="WeatherWidgetController as wwc">
-        {{ wwc.greeting }}
-    </div>
+    <weather-widget greeting="'Hello FILTHY HUMAN'"></weather-widget>
 </body>
 </html>
