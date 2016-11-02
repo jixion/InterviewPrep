@@ -1,4 +1,4 @@
 (function () {
     'use strict';
-    angular.module('WeatherWidget', []);
+    angular.module('WeatherWidget', ['api']);
 })();

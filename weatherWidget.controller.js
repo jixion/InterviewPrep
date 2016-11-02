@@ -6,8 +6,11 @@
         .controller('WeatherWidgetController', WeatherWidgetController)
     ;
 
-    function WeatherWidgetController() {
+    WeatherWidgetController.$inject = ['dataService'];
+    function WeatherWidgetController(dataService) {
         var wwc = this;
-        wwc.greeting = 'Hello, World!';
+        dataService.getApod().then(function (result) {
+            wwc.data = result;
+        })
     }
 })();

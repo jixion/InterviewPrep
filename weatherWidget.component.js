@@ -4,7 +4,7 @@
         .component('weatherWidget', {
             templateUrl: 'weatherWidget.template.html',
             bindings: {
-                greeting: '<'
+                data: '<'
             }
         });
 })();
