@@ -1,3 +1,3 @@
 (function () {
-    angular.module('linkedList', []);
+    angular.module('linkedList', ['node']);
 })();
