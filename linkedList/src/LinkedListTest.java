@@ -19,6 +19,8 @@ public class LinkedListTest {
         list.push(42);
         list.pop();
         list.pop();
+        list.push(3);
+        list.push(4);
 
         for(int i = 0; i < list.getLength(); i++) {
             System.out.println("Print: list: \t\t" + list.get(i));
