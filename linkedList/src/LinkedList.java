@@ -28,7 +28,7 @@ public class LinkedList {
 
     public void pop() {
         Node current = head;
-        for (int i = 0; i < length -1; i++) {
+        for (int i = 0; i < length - 2; i++) {
             current = current.getNext();
         }
         current.setNext(null);
@@ -38,7 +38,7 @@ public class LinkedList {
     public int get(int index) {
         Node current = head;
         if(index < length) {
-            for(int i = 0; i <= index; i++) {
+            for(int i = 0; i < index; i++) {
                 current = current.getNext();
             }
             return current.getData();

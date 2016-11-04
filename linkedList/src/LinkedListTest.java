@@ -4,7 +4,7 @@ public class LinkedListTest {
     public static void main(String[] args) {
 
         // Default constructor - let's put "0" into head element.
-        list = new LinkedList();
+        list = new LinkedList(0);
 
         // add more elements to LinkedList
         list.push(1);
@@ -20,10 +20,6 @@ public class LinkedListTest {
         list.pop();
         list.pop();
 
-		/*
-		 * Please note that primitive values can not be added into LinkedList directly. They must be converted to their
-		 * corresponding wrapper class.
-		 */
         for(int i = 0; i < list.getLength(); i++) {
             System.out.println("Print: list: \t\t" + list.get(i));
         }
