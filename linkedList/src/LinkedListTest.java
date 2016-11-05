@@ -22,7 +22,19 @@ public class LinkedListTest {
         list.push(3);
         list.push(4);
         list.pop();
-        list = list.remove(7);
+        list.remove(4);
+        list.remove(3);
+        list.remove(42);
+        list.remove(0);
+        list.remove(-42);
+        list.remove(2);
+        list.remove(0);
+        list.remove(0);
+        list.remove(0);
+        list.remove(0);
+        list.remove(0);
+        list.remove(-1);
+
 
 
         for(int i = 0; i < list.getLength(); i++) {

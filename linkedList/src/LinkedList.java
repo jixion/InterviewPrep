@@ -64,18 +64,18 @@ public class LinkedList {
         }
     }
 
-    public LinkedList remove(int index) {
-        LinkedList removedFrom = new LinkedList();
+    public void remove(int index) {
+        if(length == 0) {
+            return;
+        }
         if(index > 0 && index < length) {
-            for(int i = 0; i < index; i++) {
-                removedFrom.push(get(i));
-            }
-            for(int i = index + 1; i < length; i++) {
-                removedFrom.push(get(i));
-            }
-            return removedFrom;
-        } else {
-            return this;
+            Node toRemove = get(index, -1);
+            Node current = get(index-1, -1);
+            current.next = toRemove.next;
+            length--;
+        } else if (index == 0) {
+            head = head.next;
+            length--;
         }
     }
 
