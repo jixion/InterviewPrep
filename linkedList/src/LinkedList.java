@@ -7,8 +7,8 @@ public class LinkedList {
     int length;
 
     public LinkedList() {
-        head = new Node(0);
-        length = 1;
+        head = null;
+        length = 0;
     }
 
     public LinkedList(int data) {
@@ -17,13 +17,18 @@ public class LinkedList {
     }
 
     public void push(int data) {
-        Node toPush = new Node(data);
-        Node current = head;
-        while (current.getNext() != null) {
-            current = current.getNext();
+        if(head == null) {
+            head = new Node(data);
+            length++;
+        } else {
+            Node toPush = new Node(data);
+            Node current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(toPush);
+            length++;
         }
-        current.setNext(toPush);
-        length++;
     }
 
     public void pop() {
@@ -44,6 +49,33 @@ public class LinkedList {
             return current.getData();
         } else {
             return -1;
+        }
+    }
+
+    public Node get(int index, int bcz) {
+        Node current = head;
+        if(index < length) {
+            for(int i = 0; i < index; i++) {
+                current = current.getNext();
+            }
+            return current;
+        } else {
+            return new Node(bcz);
+        }
+    }
+
+    public LinkedList remove(int index) {
+        LinkedList removedFrom = new LinkedList();
+        if(index > 0 && index < length) {
+            for(int i = 0; i < index; i++) {
+                removedFrom.push(get(i));
+            }
+            for(int i = index + 1; i < length; i++) {
+                removedFrom.push(get(i));
+            }
+            return removedFrom;
+        } else {
+            return this;
         }
     }
 
