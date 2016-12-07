@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <button id='getProns' name='getProns'>Get Prons</button>
+    <div class='prons'>jkjkjkj</div>
+    <script type="text/javascript">
+        $(function() {
+            $("#getProns").click(function() {
+                $.ajax({
+                    type: "GET",
+                    url: 'http://www.bbc.co.uk/radio1/playlist.json',
+                    success: function(data) {
+                        var artist = data.playlist['a'][0].artist + " " + data.playlist['a'][0].title;
+                        $('div.prons').text(artist);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
