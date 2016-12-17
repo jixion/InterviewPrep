@@ -7,3 +7,13 @@ function addTwoDigits(n) {
     }
     return sum;
 }
+
+function largestNumber(n) {
+    var i;
+    var num = '';
+    for(i = 0; i < n; i++) {
+        num += '1';
+        console.log(num);
+    }
+    return num * 9;
+}
