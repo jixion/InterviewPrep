@@ -153,13 +153,13 @@ function arithmeticExpression(A, B, C) {
 function tennisSet(score1, score2) {
     //if one is 5 and the other is less than 5
     //if one is 7 and the other is > 5
-    if(score1 != score2 && score1 <= 7 && score2 <= 7) {
+    if (score1 != score2 && score1 <= 7 && score2 <= 7) {
         // we are not equal
         // we are not greater than 7
-        if(score1 < 5 && score2 == 6) {
+        if (score1 < 5 && score2 == 6) {
             //5 and less than 5
             return true;
-        } else if(score2 < 5 && score1 == 6) {
+        } else if (score2 < 5 && score1 == 6) {
             //5 and less than 5
             return true;
         } else if (score1 < 7 && score2 == 7 && score1 >= 5) {
@@ -169,3 +169,4 @@ function tennisSet(score1, score2) {
         }
     }
     return false;
+}
