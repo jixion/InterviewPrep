@@ -81,3 +81,6 @@ function knapsackLight(value1, weight1, value2, weight2, maxW) {
     }
 }
 
+function extraNumber(a, b, c) {
+    return a == c ? b : (b == c ? a : c);
+}
