@@ -22,3 +22,15 @@ function candies(n, m) {
     var perN = Math.floor(m/n);
     return perN * n;
 }
+
+function seatsInTheater(nCols, nRows, col, row) {
+    return (nCols-col+1) * (nRows-row);
+}
+
+function maxMultiple(divisor, bound) {
+    return Math.floor(bound/divisor)*divisor;
+}
+
+function circleOfNumbers(n, firstNumber) {
+    return (n/2 + firstNumber) >= n ? (n/2 + firstNumber) - n : n/2 + firstNumber;
+}
