@@ -17,3 +17,8 @@ function largestNumber(n) {
     }
     return num * 9;
 }
+
+function candies(n, m) {
+    var perN = Math.floor(m/n);
+    return perN * n;
+}
