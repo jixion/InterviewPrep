@@ -62,3 +62,8 @@ function phoneCall(min1, min2_10, min11, s) {
     }
     return i - 2;
 }
+
+function reachNextLevel(experience, threshold, reward) {
+    return experience+reward >= threshold;
+}
+
