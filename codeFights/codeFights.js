@@ -34,3 +34,31 @@ function maxMultiple(divisor, bound) {
 function circleOfNumbers(n, firstNumber) {
     return (n/2 + firstNumber) >= n ? (n/2 + firstNumber) - n : n/2 + firstNumber;
 }
+
+function lateRide(n) {
+    var h = Math.floor(n/60);
+    var m = n%60;
+
+    var string = h.toString() + '' + m.toString();
+    var i;
+    var sum = 0;
+    for(i = 0; i < string.length; i++) {
+        sum += parseInt(string[i]);
+    }
+    return sum;
+}
+
+function phoneCall(min1, min2_10, min11, s) {
+    var i;
+    var t = s;
+    for(i = 1; t >= 0; i++) {
+        if(i < 2) {
+            t -= min1;
+        } else if (i <= 10) {
+            t -= min2_10;
+        } else {
+            t -= min11;
+        }
+    }
+    return i - 2;
+}
