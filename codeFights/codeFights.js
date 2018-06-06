@@ -268,7 +268,7 @@ function metroCard(lastNumberOfDays) {
 function assignGroups(t, g) {
     b = 0;
     l = t.length/g;
-    t.sort(function(a, b){return a-b}).reverse();
+    t.sort((a, b)=>{return b-a});
     for(i = 0; i < l; i++) {
         b += t[0];
         t.splice(0, g);
