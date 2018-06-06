@@ -265,15 +265,13 @@ function metroCard(lastNumberOfDays) {
  An integer representing the minimum total length of time (in minutes) the presentations will take.
  */
 
-function assignGroups(timeEstimates, groupSize) {
-    var total = 0;
-    var i;
-    var limit = timeEstimates.length/groupSize;
-    timeEstimates.sort(function(a, b){return a-b}).reverse();
-    for(i = 0; i < limit; i++) {
-        total += timeEstimates[0];
-        sorted = timeEstimates.splice(0, groupSize);
+function assignGroups(t, g) {
+    b = 0;
+    l = t.length/g;
+    t.sort(function(a, b){return a-b}).reverse();
+    for(i = 0; i < l; i++) {
+        b += t[0];
+        t.splice(0, g);
     }
-    console.log(total);
-    return total;
+    return b;
 }
