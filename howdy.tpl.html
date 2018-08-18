@@ -13,10 +13,11 @@
             $("#getProns").click(function() {
                 $.ajax({
                     type: "GET",
-                    url: 'http://www.bbc.co.uk/radio1/playlist.json',
+                    url: 'https://polling.bbc.co.uk/radio/nhppolling/bbc_radio_one',
                     success: function(data) {
-                        var artist = data.playlist['a'][0].artist + " " + data.playlist['a'][0].title;
-                        $('div.prons').text(artist);
+                        var themdata = JSON.parse(data.substr(1, data.length-2));
+                        var artist = "Artist: " + themdata.packages.richtracks[0].artist + "<br />Title :" + themdata.packages.richtracks[0].title;
+                        $('div.prons').html(artist);
                     }
                 });
             });
