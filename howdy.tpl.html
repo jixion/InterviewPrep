@@ -16,7 +16,7 @@
                     url: 'https://polling.bbc.co.uk/radio/nhppolling/bbc_radio_one',
                     success: function(data) {
                         var themdata = JSON.parse(data.substr(1, data.length-2));
-                        var artist = "Artist: " + themdata.packages.richtracks[0].artist + "<br />Title :" + themdata.packages.richtracks[0].title;
+                        var artist = "Artist: " + themdata.packages.richtracks[0].artist + "<br />Title: " + themdata.packages.richtracks[0].title;
                         $('div.prons').html(artist);
                     }
                 });
